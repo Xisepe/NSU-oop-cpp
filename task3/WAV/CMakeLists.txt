@@ -1,0 +1,2 @@
+add_subdirectory(WAVFileStructure)
+add_subdirectory(WAVFileProcessor)

@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.16)
+project(Lab4)
+set(CMAKE_CXX_STANDARD 20)
+set(PROJECT_NAME Lab4)
+
+add_executable(${PROJECT_NAME} main.cpp)
+
+add_subdirectory(IncludeLibs)
+add_subdirectory(PrintTuple)
+add_subdirectory(CSVParser)
+add_subdirectory(Exceptions)
+add_subdirectory(Constants)
+add_subdirectory(CommandLineParser)
+add_subdirectory(test)
+target_link_libraries(${PROJECT_NAME} IncludeLibs PrintTuple CSVParser Exceptions AppState CommandLineParser)

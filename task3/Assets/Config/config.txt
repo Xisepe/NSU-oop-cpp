@@ -1,0 +1,4 @@
+mute 10 20
+#just a comment
+mix $2 28
+reverse 25 40

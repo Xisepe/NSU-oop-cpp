@@ -1,0 +1,4 @@
+set(libname Exceptions)
+add_library(${libname} src/SoundProcessorException.cpp include/SoundProcessorException.hpp WAVParserException/WAVParserReadException/WAVParserReadException.cpp WAVParserException/WAVParserReadException/WAVParserReadException.hpp WAVWriterException/WAVWriterException.cpp WAVWriterException/WAVWriterException.hpp ConfigParserException/ConfigParserException.cpp ConfigParserException/ConfigParserException.hpp RegistryException/RegistryException.cpp RegistryException/RegistryException.hpp WAVParserException/WAVProcessorWriteException/WAVProcessorWriteException.cpp WAVParserException/WAVProcessorWriteException/WAVProcessorWriteException.hpp ServiceException/ServiceException.cpp ServiceException/ServiceException.hpp)
+target_include_directories(${libname} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(${libname} PUBLIC IncludeLibs AppState)

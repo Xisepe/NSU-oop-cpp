@@ -1,0 +1,5 @@
+set(libname Services)
+add_library(${libname} Interface/Service.cpp Interface/Service.hpp Interface/ServiceInfo.hpp Interface/ServiceInfo.cpp MuteService/MuteService.cpp MuteService/MuteService.hpp MixService/MixService.cpp MixService/MixService.hpp ReverseService/ReverseService.cpp ReverseService/ReverseService.hpp)
+target_include_directories(${libname} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(${libname} PUBLIC IncludeLibs Converter Factory ConverterConfig Exceptions WAVFileProcessor ConverterConfigUtils)
+add_subdirectory(ServiceFactory)
